@@ -1,60 +1,49 @@
 <?php
 //On demande au server de demarrer une session
 session_start();
+
+//On test si le user a effectuer une saisie
+if (!empty($_POST['email'])) {
+    //On recupere la valeur de l'email
+    $email = $_POST['email'];
+    //On recupere la valeur du mot de passe
+    $mdp = $_POST['mdp'];
+
+    //On mets les informations de connexion en session
+    $_SESSION['email'] = $email;
+    $_SESSION['mdp'] = $mdp;
+
+    //On le redirige vers la page de conversion
+    header("Location:converter.php");
+    exit();
+}
 ?>
 
-<!doctype html>
-<html lang="en">
-<head>
-    <title>Login Page</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--Insertion du header-->
+<?php
+require_once "header.php"
+?>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="../public/css/bootstrap.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../public/css/style.css"/>
-</head>
-<body>
+    <div class="appForm">
+        <form method="post">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" placeholder="Entrez votre email comme identifiant"
+                       id="email"
+                       name="email">
+            </div>
+            <div class="form-group">
+                <label for="mdp">Mot de passe</label>
+                <input type="password" class="form-control" placeholder="Entrez votre mot de passe"
+                       id="mdp" name="mdp">
+            </div>
 
-<div class="container">
-    <header>
-        projet converter
-    </header>
-    <main>
-        <div class="form-header">
-            login form
-        </div>
-        <div class="appForm">
-            <form method="post">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" class="form-control" placeholder="Entrez votre email comme identifiant"
-                           id="email"
-                           required name="email">
-                </div>
-                <div class="form-group">
-                    <label for="mdp">Mot de passe</label>
-                    <input type="password" class="form-control" placeholder="Entrez votre mot de passe"
-                           id="mdp" name="mdp">
-                </div>
+            <button type="submit" class="btn btn-valider">Valider</button>
+            <button type="reset" class="btn btn-reset float-right">Effacer</button>
+        </form>
+    </div>
 
-                <button type="submit" class="btn btn-valider">Valider</button>
-                <button type="reset" class="btn btn-reset float-right">Effacer</button>
-            </form>
-        </div>
-    </main>
-</div>
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+    <!--Insertion du footer-->
+<?php
+require_once "footer.php"
+?>
