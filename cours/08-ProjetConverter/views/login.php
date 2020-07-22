@@ -23,7 +23,10 @@ if (!empty($_POST['email'])) {
 <?php
 require_once "header.php"
 ?>
-
+    <main>
+        <div class="form-header">
+            login form
+        </div>
     <div class="appForm">
         <form method="post">
             <div class="form-group">
@@ -37,7 +40,7 @@ require_once "header.php"
                 <input type="password" class="form-control" placeholder="Entrez votre mot de passe"
                        id="mdp" name="mdp">
             </div>
-
+            <hr>
             <button type="submit" class="btn btn-valider">Valider</button>
             <button type="reset" class="btn btn-reset float-right">Effacer</button>
         </form>

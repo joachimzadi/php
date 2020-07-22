@@ -26,31 +26,34 @@ if (!empty($_POST['celsius'])) {
 <?php
 require_once "header.php"
 ?>
-<div class="appForm">
-    <form method="post">
-        <div class="form-group">
-            <label for="celsius">Degré Celsius</label>
-            <input type="text" class="form-control" placeholder="Entrez la valeur de la temperature en °C"
-                   id="celsius"
-                   name="celsius">
-        </div>
+<main>
+    <div class="form-header">
+        Converter form
+    </div>
+    <div class="appForm">
+        <form method="post">
+            <div class="form-group">
+                <label for="celsius">°Celsius</label>
+                <input type="text" class="form-control" placeholder="Entrez la valeur de la temperature en °C"
+                       id="celsius" name="celsius">
+            </div>
+            <hr>
+            <button type="submit" class="btn btn-valider">Valider</button>
+            <button type="reset" class="btn btn-reset float-right">Effacer</button>
+        </form>
+    </div>
+    <div id="message">
+        <?php
+        if (!empty($celsius) && is_numeric($celsius)) {
+            echo "<div id='resultat'>$fahrenheit °F</div>";
+        } elseif (!empty($celsius) && !is_numeric($celsius)) {
+            echo "<div id='erreur'>Saisie non valide</div>";
+        }
+        ?>
+    </div>
 
-        <button type="submit" class="btn btn-valider">Valider</button>
-        <button type="reset" class="btn btn-reset float-right">Effacer</button>
-    </form>
-</div>
-<div id="message">
+    <!--Insertion du footer-->
     <?php
-    if (!empty($celsius) && is_numeric($celsius)) {
-        echo "<div id='resultat'>$fahrenheit °F</div>";
-    } elseif (!empty($celsius) && !is_numeric($celsius)) {
-        echo "<div id='erreur'>Saisie non valide</div>";
-    }
+    require_once "footer.php"
     ?>
-</div>
-
-<!--Insertion du footer-->
-<?php
-require_once "footer.php"
-?>
-<script src="../public/js/monJs.js"></script>
+    <script src="../public/js/monJs.js"></script>
