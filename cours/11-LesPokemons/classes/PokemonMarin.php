@@ -14,9 +14,6 @@ abstract class PokemonMarin extends Pokemon
         $this->nbNageoire = $nbNageoire;
     }
 
-    /**
-     * @return int
-     */
     public function getNbNageoire(): int
     {
         return $this->nbNageoire;

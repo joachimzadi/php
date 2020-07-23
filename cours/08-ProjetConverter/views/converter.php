@@ -54,6 +54,6 @@ require_once "header.php"
 
     <!--Insertion du footer-->
     <?php
-    require_once "footer.php"
+    require_once "footer.php";
     ?>
     <script src="../public/js/monJs.js"></script>
