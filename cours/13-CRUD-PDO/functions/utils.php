@@ -1,10 +1,38 @@
 <?php
+/**
+ * Permet de se connecter à la base de données de l'exercice
+ * @return PDO une instance de la classe PDO, sinon leve une execption
+ */
+function db_connexion()
+{
+    //Les paprametres de connexion à la base de données
+    $database = "formation_db";
+    $user = "root";
+    $pass = "";
+
+    //L'URL de la BDD
+    $url = "mysql:host=127.0.0.1;dbname=$database";
+
+    try {
+        //Connexion à la base de données
+        $connexion = new PDO($url, $user, $pass);
+
+        //générer des exceptions en cas d'erreur
+        $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        //On retourne une instance de la connexion
+        return $connexion;
+    } catch (PDOException $e) {
+        exit($e->getMessage());
+    }
+}
 
 /**
  * Permet de creer l'en-tete de notre site
  * @param $titre
  */
-function template_en_tete_page($titre){
+function template_en_tete_page($titre)
+{
     echo <<<EOT
 <!doctype html>
 <html lang="fr">
@@ -19,6 +47,7 @@ function template_en_tete_page($titre){
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
 
 </head>
 <body>
@@ -43,13 +72,13 @@ function template_en_tete_page($titre){
         </div>
     </nav>
 EOT;
-
 }
 
 /**
  * Permet de creer le pied de page
  */
-function template_pied_page(){
+function template_pied_page()
+{
     echo <<<EOT
 </div>
 
