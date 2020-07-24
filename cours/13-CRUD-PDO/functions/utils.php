@@ -19,6 +19,7 @@ function template_en_tete_page($titre){
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
 
 </head>
 <body>
