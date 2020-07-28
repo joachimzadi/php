@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Vollkorn&display=swap");
+* {
+  font-family: "Vollkorn", serif;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 5rem;
+}
+
+.navbar-brand {
+  font-family: "Fredoka One", cursive;
+  font-size: 2rem;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+}
+
+.page-header {
+  margin-top: 0.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1.5rem 0;
+}
+
+.commentaire {
+  text-align: justify;
+}
+
+.table {
+  border: 0.2rem solid #dee2e6;
+}
+.table thead {
+  background-color: #424242;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.table .prenom, .table .ddn, .table .fonction, .table .salaire, .table .identifiant, .table .email, .table .identifiant {
+  padding: 0.8rem 0 0;
+}
+.table .identifiant {
+  padding-left: 1.5rem;
+}
+.table .prenom {
+  text-transform: capitalize;
+}
+.table .ddn {
+  text-align: center;
+}
+.table .fonction {
+  text-align: center;
+  text-transform: uppercase;
+}
+.table .email {
+  padding-left: 1.5rem;
+  text-transform: lowercase;
+}
+.table .salaire {
+  text-align: center;
+}
+.table .no-employe {
+  text-align: center;
+  color: #8bc34a;
+  font-size: 1.5rem;
+}
+.table a:focus, .table a:hover {
+  color: #26a69a;
+}
+.table a {
+  font-size: 1.3rem;
+}
+.table .modifier {
+  padding: 0;
+  color: #00bfa5;
+}
+.table .supprimer {
+  padding: 0;
+  color: #dd2c00;
+}
+.table .detail {
+  padding: 0;
+  color: #fb8c00;
+}
+
+.error {
+  color: red;
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+div.avatar > img {
+  border-radius: 50%;
+}
+
+div.container.profile {
+  padding: 10px 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.no-marging {
+  margin: 0 !important;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolue {
+  position: absolute;
+}
+
+div.profile-row {
+  margin-top: 55px;
+}
+
+.absolue.center {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0%);
+}
+
+div.alert {
+  width: 40%;
+}
+
+.alert-col > .alert {
+  padding: 10px;
+  border-radius: 0;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.alert-col > .alert.display {
+  opacity: 1;
+}
+
+hr {
+  height: 2px;
+}
+
+.content-right > * {
+  float: right;
+}
+
+.form-btn {
+  min-width: 100px;
+  margin: 0 5px;
+  max-width: 200px;
+}
+
+img.avart-img {
+  max-width: 200px;
+}
+
+div.avatar-bg {
+  background: url(https://www.gravatar.com/avatar/1234566?size=200&d=mm) 50% 50%;
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  border-radius: 50%;
+  margin-left: calc(50% - 100px);
+}
+
+.form-control {
+  border-radius: 0;
+}
+
+.form-employe {
+  box-shadow: 2px 2px 5px;
+  padding: 1rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#footerpad {
+  padding-top: 1.5rem;
+  background-color: #343a40;
+}
+#footerpad p {
+  color: #e1f5fe;
+  text-transform: lowercase;
+}
+
+.photo {
+  width: 10rem;
+}
+
+.detail-prenom {
+  font-size: 2rem;
+}
+
+/*# sourceMappingURL=app.css.map */
