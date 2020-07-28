@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-create database if not exists formation_db;
-
-use formation_db;
-
-create table if not exists Employes
-(
-    id      int auto_increment not null,
-    prenom  varchar(50)        not null,
-    ddn     date,
-    titre   varchar(25)        not null,
-    email   varchar(50)        not null,
-    salaire int                not null,
-    constraint pk_employe primary key (id),
-    constraint uq_prenom_employe unique (prenom),
-    constraint uq_email_employe unique (email)
-);
-=======
 create database if not exists dawm_db;
 
 # use dawm_db;
@@ -45,4 +27,3 @@ values ('Badji', '2010-10-10', 'pdg', 'badji@dawm.as', 75000),
        ('Sabrine', '2010-10-10', 'rh', 'sabrine@dawm.as', 60000);
 
 drop table Employes;
->>>>>>> origin/master

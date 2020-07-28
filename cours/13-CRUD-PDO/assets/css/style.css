@@ -1,0 +1,17 @@
+.table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  border: 0.2rem solid #dee2e6;
+}
+.table thead {
+  text-align: center;
+}
+.table td {
+  text-align: center;
+}
+.table td a {
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
