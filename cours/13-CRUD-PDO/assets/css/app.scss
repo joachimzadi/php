@@ -223,9 +223,15 @@ div.avatar {
 .photo {
   width: 10rem;
 }
-.detail {
 
-}
 .detail-prenom {
-font-size: 2rem;
+  font-size: 2rem;
+}
+
+.connexion{
+  width: 30%;
+  margin: 2rem auto;
+  background-color: #e0f2f1;
+  padding: 0.5rem 1rem;
+  border: solid .1rem darkgray;
 }

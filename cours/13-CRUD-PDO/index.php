@@ -16,5 +16,18 @@ require_once "functions/app_utils.php"
     Si vous lisez ce texte, c'est que vous est sur la page d'accueil. Vous pouvez afficher la liste des employés en cliquant sur le lien
     <strong><em>Employés</em></strong> en haut à droite.
 </p>
+<!--<div class="connexion">-->
+<!--    <form action="/action_page.php">-->
+<!--        <div class="form-group">-->
+<!--            <label for="email">Email address:</label>-->
+<!--            <input type="email" class="form-control" placeholder="Enter email" id="email">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label for="pwd">Password:</label>-->
+<!--            <input type="password" class="form-control" placeholder="Enter password" id="pwd">-->
+<!--        </div>-->
+<!--        <button type="submit" class="btn btn-primary">Submit</button>-->
+<!--    </form>-->
+<!--</div>-->
 
 <?php template_pied_page(); ?>

@@ -9,7 +9,7 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 //Si la methode est GET
 if (($method === "GET") && !empty($_GET['id'])) {
-    //On recupere l'id de l'mployé s'il existe
+    //On recupere l'id de l'employé s'il existe
     $id = htmlspecialchars($_GET['id']);
     //Instruction sql de selection de l'employé
     $sql = "select * from Employes where id = ?";
@@ -40,7 +40,7 @@ if (($method === "POST") && !empty($_POST)) {
     $salaire = !empty($_POST['salaire']) ? $_POST['salaire'] : '';
     $photo = !empty($_FILES['photo']['tmp_name']) ? $_FILES['photo'] : "photo_" . $prenom;
 
-    //On verifie que les daisie correspondent bien aux valeurs attendues dans les champs
+    //On verifie que les saisies correspondent bien aux valeurs attendues dans les champs
     $estUnEntier = filter_input(INPUT_POST, 'salaire', FILTER_VALIDATE_INT);
     $estUnEmail = filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL);
     $prenomValide = strlen(trim($prenom)) !== 0;

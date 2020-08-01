@@ -35,7 +35,6 @@ function supprimer_employe($id)
 {
     $connexion = db_connexion();
     if (!empty($id)) {
-        $id = htmlspecialchars($id);
         $sql_suppression = "delete from Employes where id = ?";
         $req_preparee = $connexion->prepare($sql_suppression);
         $req_preparee->execute([$id]);
@@ -82,7 +81,7 @@ function template_en_tete_page($titre)
                                     data-target="#bs-example-navbar-collapse-1">
                                 <span class="navbar-toggler-icon"></span>
                             </button>
-                            <a class="navbar-brand" href="#">DAWM-ASNIERES</a>
+                            <a class="navbar-brand" href="#">DWWM-ASNIERES</a>
                             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                 <ul class="navbar-nav ml-md-auto">
                                     <li class="nav-item active">
@@ -124,7 +123,7 @@ function template_pied_page()
                                                     class="fa fa-circle fa-stack-2x"></i><i
                                                     class="fa fa-pinterest fa-stack-1x fa-inverse"></i></span></a></li>
                             </ul>
-                            <p class="copyright text-center">Copyright &copy; j4l-technologies 2020 | pour dawm-asnieres</p>
+                            <p class="copyright text-center">Copyright &copy; j4l-technologies 2020 | pour dwwm-asnieres</p>
                             </div>
                     </div>
                 </div>

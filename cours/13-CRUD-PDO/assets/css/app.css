@@ -202,4 +202,12 @@ div.avatar-bg {
   font-size: 2rem;
 }
 
+.connexion {
+  width: 30%;
+  margin: 2rem auto;
+  background-color: #e0f2f1;
+  padding: 0.5rem 1rem;
+  border: solid 0.1rem darkgray;
+}
+
 /*# sourceMappingURL=app.css.map */

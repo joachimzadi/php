@@ -37,18 +37,11 @@ $nb_employes_total = $connexion->query('SELECT COUNT(*) FROM Employes')->fetchCo
     Vous avez aussi la possibilité d'ajouter un nouvel employé en cliquant sur le lien <strong>Ajouter</strong>.
 
 </p>
+
 <p class="float-right">
     <a href="employe.php" class="btn btn-primary">Ajouter</a>
 </p>
-<?php
-if (!empty($msg)) {
-    echo <<<EOT
-            <div class="alert alert-success">
-              <strong>$msg</strong>
-            </div>
-        EOT;
-}
-?>
+
 <table class="table table-hover">
     <thead>
     <tr>
